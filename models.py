@@ -1,3 +1,5 @@
+'''the file created to create class for create model in database'''
+
 from sqlalchemy import Column, Integer, String, Boolean
 from databese import Base
 

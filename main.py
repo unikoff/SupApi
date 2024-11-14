@@ -1,3 +1,5 @@
+'''this file uses all the early modules created and creates an API'''
+
 import uvicorn
 from fastapi import FastAPI, Depends, HTTPException
 
@@ -13,8 +15,10 @@ app = FastAPI()
 def get_db():
     db = Session_local()
     try:
+        print(1)
         yield db
     finally:
+        print(2)
         db.close()
 
 
